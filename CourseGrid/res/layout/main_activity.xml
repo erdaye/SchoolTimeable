@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dbdbdb"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/fragmentRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+     <LinearLayout
+        android:id="@+id/bottomList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/sliver"
+        android:orientation="horizontal" >
+
+     <LinearLayout style="@style/linaer_bottom" >
+
+         <RadioButton
+             android:id="@+id/course"
+             style="@style/rbt_bottom"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:drawableTop="@drawable/course2"
+             android:text="课程表" />
+     </LinearLayout>
+
+        <LinearLayout style="@style/linaer_bottom" >
+
+            <RadioButton
+                android:id="@+id/share"
+                style="@style/rbt_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/share2"
+                android:text="二维码分享" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/linaer_bottom" >
+
+            <RadioButton
+                android:id="@+id/notification"
+                style="@style/rbt_bottom"
+                android:drawableTop="@drawable/notification2"
+                android:text="提醒" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/linaer_bottom" >
+
+        <RadioButton
+            android:id="@+id/scan"
+            style="@style/rbt_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/camera2"
+            android:text="二维码扫描" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

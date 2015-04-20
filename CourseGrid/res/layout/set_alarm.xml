@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+        android:layout_marginTop="22dp"
+       android:background="@drawable/b_g2">
+
+    <ListView android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+          android:cacheColorHint="#00000000" 
+        android:background="@drawable/listview_bg"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:orientation="horizontal"
+    
+      >
+
+        <TextView android:id="@+id/alarm_save"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+                android:background="@drawable/listview_bg"
+                android:clickable="true"
+           
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/done"/>
+
+        <TextView android:id="@+id/alarm_revert"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+                android:background="@drawable/listview_bg"
+            android:layout_weight="1"
+                android:clickable="true"
+              android:gravity="center"
+             android:textColor="#ffffff"
+         
+            android:text="@string/revert"/>
+
+        <TextView android:id="@+id/alarm_delete"
+            android:focusable="true"
+              android:gravity="center"
+              android:clickable="true"
+            android:layout_width="wrap_content"
+                android:background="@drawable/listview_bg"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+             android:textColor="#ffffff"
+         
+            android:text="@string/delete"/>
+
+    </LinearLayout>
+
+</LinearLayout>

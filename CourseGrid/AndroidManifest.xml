@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cn.daming.deskclock"
+    	
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <uses-sdk android:minSdkVersion="11" />
+     
+
+    <original-package android:name="com.cn.daming.deskclock" />
+    
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+
+ <uses-permission android:name="android.permission.GET_TASKS" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+<uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+ 
+   <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+      <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.FLASHLIGHT"/>
+  <uses-feature android:name="android.hardware.camera" />
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+    <application
+        android:icon="@drawable/title1"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar">
+        
+        
+        
+        <provider  android:name="AlarmProvider"
+                android:authorities="com.cn.daming.deskclock"
+                android:exported="false" />
+        
+        <activity
+          
+            android:name="com.cn.daming.deskclock.DeskClockMainActivity" 
+          
+          
+          
+            android:configChanges="orientation|keyboardHidden|keyboard|navigation">
+             <!-- <intent-filter >
+                 <category android:name="android.intent.category.DESK_DOCK" />
+                <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter> -->
+            <meta-data android:name="android.dock_home" android:value="true" />
+            
+          
+        </activity>
+        
+         <!--  <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DESK_DOCK" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+         
+         -->
+        <activity android:name="com.cn.daming.deskclock.SetAlarm"
+                android:configChanges="orientation|keyboardHidden|keyboard|navigation" />
+        
+        <activity android:name="com.cn.daming.deskclock.SettingsActivity"
+            
+                android:taskAffinity=""
+                android:excludeFromRecents="true"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+       <activity android:name="com.cn.daming.deskclock.AlarmAlertFullScreen"
+           android:excludeFromRecents="true"
+      
+           android:launchMode="singleInstance"
+           android:taskAffinity=""
+           android:configChanges="orientation|keyboardHidden|keyboard|navigation"/>
+
+        <receiver android:name="com.cn.daming.deskclock.AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.cn.daming.deskclock.ALARM_ALERT" />
+                <action android:name="alarm_killed" />
+                <action android:name="cancel_snooze" />
+            </intent-filter>
+        </receiver>
+            
+        <activity android:name="com.cn.daming.deskclock.AlarmAlert"
+            android:excludeFromRecents="true"
+            android:theme="@style/alarm_alert"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:configChanges="orientation|keyboardHidden|keyboard|navigation"/>
+            
+        
+        <activity android:name="com.cn.daming.deskclock.HandleSetAlarm"
+                android:theme="@android:style/Theme.NoDisplay"
+                android:excludeFromRecents="true"
+                android:permission="com.android.alarm.permission.SET_ALARM">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_ALARM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+       
+        <service android:name="com.cn.daming.deskclock.AlarmKlaxon"
+                android:description="@string/alarm_klaxon_service_desc"
+                >
+            <intent-filter>
+                <action android:name="com.cn.daming.deskclock.ALARM_ALERT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.cn.daming.deskclock.AlarmInitReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <activity
+            android:name="com.kcb.qidong"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         
+          <activity
+            android:name="com.kcb.shezhi"
+            
+           android:windowSoftInputMode="stateUnchanged">
+</activity>
+
+          
+          
+          
+          
+          <activity
+   android:name="cn.sharesdk.framework.ShareSDKUIShell"
+   android:theme="@android:style/Theme.Translucent.NoTitleBar"
+   android:configChanges="keyboardHidden|orientation|screenSize"
+   android:screenOrientation="portrait"
+   android:windowSoftInputMode="stateHidden|adjustResize" />
+          
+          <activity
+   android:name=".wxapi.WXEntryActivity"
+   android:theme="@android:style/Theme.Translucent.NoTitleBar"
+   android:configChanges="keyboardHidden|orientation|screenSize"
+   android:exported="true"
+   android:screenOrientation="portrait" />
+          
+          <activity
+   android:name=".yxapi.YXEntryActivity"
+   android:theme="@android:style/Theme.Translucent.NoTitleBar"
+   android:configChanges="keyboardHidden|orientation|screenSize"
+   android:exported="true"
+   android:screenOrientation="portrait" />
+          
+
+          
+              <activity
+            android:name="com.portaura.zxing.encode.QRcode"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity  android:name="com.portaura.zxing.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>      
+     
+     <activity android:name="com.kcb.CourseFragment"> </activity>
+        
+          
+     <activity android:name="com.kcb.duqu"> </activity>
+     
+    <activity android:name="com.kcb.MainActivity"
+   				android:theme="@android:style/Theme.WithActionBar"> </activity> 
+    
+   <activity  android:name="com.kcb.CaptureActivity"></activity>
+<activity  android:name="com.kcb.ResultActivity"></activity>
+   <activity android:name="com.kcb.SelectPicPopupWindow" android:theme="@style/MyDialogStyleBottom" /> 
+    </application>
+</manifest>
