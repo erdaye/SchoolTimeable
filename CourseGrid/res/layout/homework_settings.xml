@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/bg3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+         android:gravity="right"
+         android:background="#1f1f1f">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/camera2"
+           />
+    </LinearLayout>
+
+>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/inputkemu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.95"
+            android:gravity="center"
+            android:text="科目：" 
+            android:textSize="18dip"/>
+
+        <EditText
+        android:id="@+id/kemu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:enabled="true"
+        android:editable="true"
+        android:hint="请输入科目(如语文)"
+        />
+        
+         
+    </LinearLayout>
+   
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+        
+        
+        <TextView
+        android:id="@+id/inputdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="布置日期" 
+        android:textSize="13dip"
+        android:gravity="center"
+        android:autoText="true"/>
+        <EditText
+        android:id="@+id/start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:enabled="true"
+        android:editable="true"
+        android:hint="请输入布置日期(如2015/5/10)"
+        android:digits="1234567890/ " 
+        />
+        
+        
+        </LinearLayout>
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+         <TextView
+        android:id="@+id/input_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="具体时间" 
+        android:textSize="13dip"
+        android:gravity="center"
+        android:autoText="true"/>
+         
+         <EditText
+        android:id="@+id/start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:enabled="true"
+        android:editable="true"
+        android:hint="请输入具体时间(如15:30)"
+        android:digits="1234567890:" 
+        />
+            
+         </LinearLayout>
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+         <TextView
+        android:id="@+id/input_enddate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="截止日期" 
+        android:textSize="13dip"
+        android:gravity="center"
+        android:autoText="true"/>
+         
+         <EditText
+        android:id="@+id/end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:enabled="true"
+        android:editable="true"
+        android:hint="请输入截止日期"
+        android:digits="1234567890/" 
+        />
+             
+             
+         </LinearLayout>
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+         <TextView
+        android:id="@+id/input_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="具体时间" 
+        android:textSize="13dip"
+        android:gravity="center"
+        android:autoText="true"/>
+         
+         <EditText
+        android:id="@+id/end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:enabled="true"
+        android:editable="true"
+        android:hint="请输入具体时间"
+        android:digits="1234567890:" 
+        />
+             
+             
+         </LinearLayout>
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+         <TextView
+        android:id="@+id/input_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="具体内容" 
+        android:textSize="13dip"
+        android:gravity="center"
+        android:autoText="true"/>
+         
+         <EditText
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:enabled="true"
+        android:editable="true"
+        android:hint="请输入具体内容"
+        android:minLines="4"
+        android:autoLink="all"
+        />
+        
+             
+         </LinearLayout>
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" >
+
+             <Button
+                 android:id="@+id/edit"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_alignParentTop="true"
+                 android:layout_marginRight="61dp"
+                 android:text="编辑" />
+
+             <Button
+                 android:id="@+id/submit"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentTop="true"
+                 android:layout_marginRight="59dp"
+                 android:layout_toLeftOf="@+id/edit"
+                 android:text="确定" />
+
+         </RelativeLayout>
+
+</LinearLayout>

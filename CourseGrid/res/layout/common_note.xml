@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:text="备忘录"/>
+         
+         <EditText
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:enabled="true"
+        android:editable="true"
+        android:hint="请输入具体内容"
+        android:minLines="4"
+        android:autoLink="all"/>
+    </LinearLayout>
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提醒时间"/>
+     
+      <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" >
+
+             <Button
+                 android:id="@+id/edit"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_alignParentTop="true"
+                 android:layout_marginRight="61dp"
+                 android:text="编辑" />
+
+             <Button
+                 android:id="@+id/submit"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentTop="true"
+                 android:layout_marginRight="59dp"
+                 android:layout_toLeftOf="@+id/edit"
+                 android:text="确定" />
+
+         </RelativeLayout>
+   
+
+</LinearLayout>
