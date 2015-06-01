@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     android:background="#ffc" 
+    >
+
+    <include
+        android:id="@+id/note_homework"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/note" />
+
+    <ListView
+        android:id="@+id/homework_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000" >
+    </ListView>
+
+    <Button
+        android:id="@+id/CreateNew"
+        android:layout_width="52dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="140dp"
+        android:background="@drawable/add"
+        android:paddingLeft="20dp" />
+
+</LinearLayout>
