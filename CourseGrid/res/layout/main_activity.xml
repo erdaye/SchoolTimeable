@@ -23,25 +23,25 @@
      <LinearLayout style="@style/linaer_bottom" >
 
          <RadioButton
-             android:id="@+id/course"
+             android:id="@+id/collegecourse"
              style="@style/rbt_bottom"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_weight="1"
              android:drawableTop="@drawable/course2"
-             android:text="课程表" />
+             android:text="大学生定制" />
      </LinearLayout>
 
         <LinearLayout style="@style/linaer_bottom" >
 
             <RadioButton
-                android:id="@+id/share"
+                android:id="@+id/Midcourse"
                 style="@style/rbt_bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/share2"
-                android:text="二维码分享" />
+                android:text="中学生定制" />
         </LinearLayout>
 
         <LinearLayout style="@style/linaer_bottom" >
@@ -50,7 +50,7 @@
                 android:id="@+id/notification"
                 style="@style/rbt_bottom"
                 android:drawableTop="@drawable/notification2"
-                android:text="提醒" />
+                android:text="日程安排" />
         </LinearLayout>
 
         <LinearLayout style="@style/linaer_bottom" >
@@ -61,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/camera2"
-            android:text="二维码扫描" />
+            android:text="我要当学霸" />
         </LinearLayout>
     </LinearLayout>
 
