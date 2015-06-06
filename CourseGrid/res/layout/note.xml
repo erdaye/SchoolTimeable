@@ -3,25 +3,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-    
-    <LinearLayout
+     <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal" >
+    android:layout_height="40dp"
+    android:orientation="horizontal" 
+    android:background="#ffa500"
+    >
 
-    <RadioButton
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/back"
+        android:background="@drawable/toleft"/>
+      
+         
+    
+    
+<Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:id="@+id/zuoye"
-        android:text="作业记"></RadioButton>
-   <RadioButton
+        android:text="作业记"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:background="#ffa500"/>
+  
+   <Button
      android:layout_width="match_parent"
-     android:layout_height="wrap_content"
+     android:layout_height="match_parent"
      android:layout_weight="1"
-     android:id="@+id/jishi"
-     android:text="备忘录"></RadioButton>
+     android:id="@+id/riji"
+     android:text="日记本"
+     android:textColor="#000"
+     android:textSize="20dp"
+     android:gravity="center_horizontal"
+     android:background="#ffa500"/>
    
    
   

@@ -3,7 +3,7 @@
  xmlns:android="http://schemas.android.com/apk/res/android"
        android:layout_width="fill_parent" 
     android:layout_height="fill_parent"
-    android:background="@drawable/bg3">
+    android:background="@color/danhuang">
     
        <LinearLayout 
     
@@ -88,6 +88,7 @@
               android:background="@drawable/listview_bg"
               android:text="第一节"
              android:gravity="center_horizontal"
+             
            />
            
              <TextView 
@@ -233,10 +234,10 @@
       
       
       
-      <LinearLayout
+                   <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
     
           <TextView 
@@ -432,54 +433,6 @@
 
           
           </LinearLayout>
-           <LinearLayout
-            android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
-
-    
-          <TextView 
-            android:id="@+id/a90"
-                style="@style/textStyle2"
-              android:background="@drawable/listview_bg"
-                android:text="第八节"
-                    android:gravity="center_horizontal"/>
-             <TextView 
-                 android:id="@+id/a91"
-           style="@style/textStyle2"
-              android:background="@drawable/text_view_border3"
-              />
-               <TextView 
-                   android:id="@+id/a92"
-           style="@style/textStyle2"
-              android:background="@drawable/text_view_border4"
-              />
-                 <TextView 
-                     android:id="@+id/a93"
-           style="@style/textStyle2"
-              android:background="@drawable/text_view_border5"
-              />
-                   <TextView 
-                       android:id="@+id/a94"
-           style="@style/textStyle2"
-              android:background="@drawable/text_view_border6"
-              />
-                     <TextView
-                         android:id="@+id/a95" 
-           style="@style/textStyle2"
-              android:background="@drawable/text_view_border1"
-              />
-                       <TextView 
-            android:id="@+id/a96"
-           style="@style/textStyle2"
-              android:background="@drawable/text_view_border2"
-              />
-          
-
-          
-          </LinearLayout>
-      
-      
        </LinearLayout> 
            
       </ScrollView> 

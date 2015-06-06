@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffc"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignLeft="@+id/content_describe1"
+            android:layout_below="@+id/content_describe1"
+            android:src="@drawable/mynote2" />
+
+        <TextView
+            android:id="@+id/namestring1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/content_describe1"
+            android:layout_alignLeft="@+id/content_describe1"
+            android:layout_marginLeft="23dp"
+            android:text="sellina"
+            android:textColor="#6495ED" />
+
+        <TextView
+            android:id="@+id/content_describe1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/mytouxiang1"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/mytouxiang1"
+            android:text="这题好难 啊,求解答"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/content_describe12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/namestring1"
+            android:layout_below="@+id/image1"
+            android:layout_marginTop="16dp"
+            android:text="1小时前" />
+
+        <ImageView
+            android:id="@+id/mytouxiang1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/add" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/android:list"/>"
+
+</LinearLayout>

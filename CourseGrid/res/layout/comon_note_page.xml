@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+     android:background="#ffc">
      <include
         android:id="@+id/note_common"
         android:layout_width="fill_parent"
@@ -10,13 +11,20 @@
         layout="@layout/note" />
 
     <ListView
-        android:id="@+id/homework"
+        android:id="@+id/commonnote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@drawable/listview_bg"
+       
         android:cacheColorHint="#00000000" >
     </ListView>
+     <Button
+        android:id="@+id/CreateNew2"
+        android:layout_width="52dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="120dp"
+        android:background="@drawable/add"
+        android:paddingLeft="20dp" />
     
     
 

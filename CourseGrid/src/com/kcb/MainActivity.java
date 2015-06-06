@@ -4,62 +4,84 @@ package com.kcb;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import com.aiwenquan.Aiwen_shouye;
 import com.cn.daming.deskclock.DeskClockMainActivity;
 import com.cn.daming.deskclock.R;
+import com.me.Me_shouye;
+
+import android.R.integer;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 public class MainActivity extends Activity {
 
 	private RadioButton course, share, notification, scan;
 	private Fragment courseFragment, QRcode, alarmFragment, cameraFragment;
 	FragmentManager fgManager;
+	private TextView tv1;
+//	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.main_activity);
+		tv1=(TextView) findViewById(R.id.goodtitle);
+		//
 		fgManager = getFragmentManager();
 		init();
+		Intent getintent=getIntent();
+		int  id=getintent.getIntExtra("fragid", -1);
+		if(id>0)
+		{
+		if (id==1)
+		share.setVisibility(0);}
 		course.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				courseFragment = new CourseFragment();
 				changeFrament(courseFragment, null, "talkFragment");
 				changeRadioButtonImage(v.getId());
+				tv1.setText("课程表");
 			}
 		});
 		
 		share.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				QRcode = new QRFragment();
-				changeFrament(QRcode, null, "QRcode");
+				QRcode = new NoteFragment();
+				changeFrament(QRcode, null, "Homework_page");
 				changeRadioButtonImage(v.getId());
+				tv1.setText("笔记本");
 			}
 		});
 		
 		notification.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				alarmFragment = new DeskClockMainActivity();
-				changeFrament(alarmFragment, null, "alarmFragment");
+				alarmFragment = new Aiwen_shouye();
+				changeFrament(alarmFragment, null, "Aiwen_shouye");
 				changeRadioButtonImage(v.getId());
+				tv1.setText("爱问圈");
 			}
 		});
 		
 		scan.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				cameraFragment = new CameraFragment();
-				changeFrament(cameraFragment, null, "cameraFragment");
+				cameraFragment = new Me_shouye();
+				changeFrament(cameraFragment, null, "me_shouye");
 				changeRadioButtonImage(v.getId());
+				tv1.setText("我");
 			}
 		});
 	}
