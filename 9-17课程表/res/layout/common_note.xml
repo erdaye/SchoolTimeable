@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/danhuang"
+    android:orientation="vertical"
+ >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="写个题目咯" 
+               android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/rijititle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:autoLink="all"
+            android:editable="true"
+            android:enabled="true"
+            android:hint="请输入具体内标题" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/rijicontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:editable="true"
+        android:enabled="true"
+        android:hint="请输入具体内容"
+        android:minLines="5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+
+        <Button
+            android:id="@+id/submit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+          
+            android:text="确定" />
+
+    </RelativeLayout>
+
+</LinearLayout>

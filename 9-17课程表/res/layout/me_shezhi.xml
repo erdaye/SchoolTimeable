@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/danhuang"
+     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+   
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="头像"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/shezhi_touxiang"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/share1" />
+       
+        
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+   
+     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"/>
+
+      <EditText
+          android:id="@+id/shezhi_nicheng"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true"
+          android:ems="10"
+          android:text="selina"
+          android:editable="true" >
+
+          <requestFocus />
+      </EditText>
+
+</RelativeLayout>
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+   
+     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="爱问号"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"/>
+
+      <EditText
+          android:id="@+id/shezhi_aiwenhao"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true"
+          android:ems="10"
+          android:text="123456"
+          android:editable="true" >
+
+          <requestFocus />
+      </EditText>
+      
+          
+</RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+      
+     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主题"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"/>
+
+     <Spinner
+         android:id="@+id/me_spinner"
+         android:layout_width="210dp"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true"
+         android:entries="@array/mylist"
+          />
+
+</RelativeLayout>
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/submit_me"
+    android:text="确认"
+    android:layout_gravity="center"
+    android:background="@color/mubanse"/>
+
+</LinearLayout>

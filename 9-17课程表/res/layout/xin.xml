@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@color/danhuang">
+	
+	<LinearLayout android:orientation="horizontal"
+			android:id="@+id/kcm" android:layout_width="fill_parent"
+			android:layout_height="50dp" android:layout_marginTop="49dip"
+			android:background="@drawable/edit_view_border"
+			android:layout_centerHorizontal="true">
+			<TextView android:layout_width="wrap_content" android:text="课程:"
+			    android:textSize="20sp"
+				android:textColor="@color/black" android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content" android:layout_marginLeft="5dip" 
+				/>
+			<EditText android:layout_width="wrap_content" android:id="@+id/kcm_edit"
+				android:layout_weight="1" android:singleLine="true"
+				android:hint="请输入课程名" android:textSize="20sp"
+				android:layout_gravity="center_vertical" android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_height="wrap_content" android:background="@null" />
+		</LinearLayout>
+		<LinearLayout android:orientation="horizontal"
+			android:id="@+id/address" android:layout_width="fill_parent"
+			android:layout_height="50dp" android:layout_below="@+id/kcm"
+			android:layout_marginTop="5dip" android:background="@drawable/edit_view_border"
+			android:layout_centerHorizontal="true">
+			<TextView android:layout_width="wrap_content" android:text="地点:"
+			    android:textSize="20sp"
+				android:textColor="@color/black" android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content" android:layout_marginLeft="5dip" />
+			<EditText android:layout_width="wrap_content"
+				android:singleLine="true" android:id="@+id/address_edit"
+				android:layout_weight="1" 
+
+				android:hint="请输入上课地点" android:textSize="20sp"
+				android:layout_gravity="center_vertical" android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_height="wrap_content" android:background="@null" />
+		</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+			android:id="@+id/zhoushu" android:layout_width="fill_parent"
+			android:layout_height="50dp" android:layout_below="@+id/address"
+			android:layout_marginTop="5dip" android:background="@drawable/edit_view_border"
+			android:layout_centerHorizontal="true">
+			<TextView android:layout_width="wrap_content" android:text="周数:"
+			    android:textSize="20sp"
+				android:textColor="@color/black" android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content" android:layout_marginLeft="5dip" />
+			<EditText android:layout_width="wrap_content"
+				android:singleLine="true" android:id="@+id/zhoushu_edit"
+				android:layout_weight="1" 
+				android:hint="请输入上课周数" android:textSize="20sp"
+				android:layout_gravity="center_vertical" android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_height="wrap_content" android:background="@null" />
+		</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+			android:id="@+id/haoma" android:layout_width="fill_parent"
+			android:layout_height="50dp" android:layout_below="@+id/zhoushu"
+			android:layout_marginTop="5dip" android:background="@drawable/edit_view_border"
+			android:layout_centerHorizontal="true">
+			<TextView android:layout_width="wrap_content" android:text="号码:"
+			    android:textSize="20sp"
+				android:textColor="@color/black" android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content" android:layout_marginLeft="5dip" />
+			<EditText android:layout_width="wrap_content"
+				android:singleLine="true" android:id="@+id/haoma_edit"
+				android:layout_weight="1" 
+				android:hint="请输入老师号码" android:textSize="20sp"
+				android:layout_gravity="center_vertical" android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_height="wrap_content" android:background="@null" />
+		</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+			android:id="@+id/suxing" android:layout_width="fill_parent"
+			android:layout_height="50dp" android:layout_below="@+id/haoma"
+			android:layout_marginTop="5dip" android:background="@drawable/edit_view_border"
+			android:layout_centerHorizontal="true">
+			<TextView android:layout_width="wrap_content" android:text="属性:"
+			    android:textSize="20sp"
+				android:textColor="@color/black" android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content" android:layout_marginLeft="5dip" />
+			<EditText android:layout_width="wrap_content"
+				android:singleLine="true" android:id="@+id/suxing_edit"
+				android:layout_weight="1" 
+				android:hint="是否必修" android:textSize="20sp"
+				android:layout_gravity="center_vertical" android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_height="wrap_content" android:background="@null" />
+		</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+			android:id="@+id/teachername" android:layout_width="fill_parent"
+			android:layout_height="50dp" android:layout_below="@+id/suxing"
+			android:layout_marginTop="5dip" android:background="@drawable/edit_view_border"
+			android:layout_centerHorizontal="true">
+			<TextView android:layout_width="wrap_content" android:text="老师:"
+			    android:textSize="20sp"
+				android:textColor="@color/black" android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content" android:layout_marginLeft="5dip" />
+			<EditText android:layout_width="wrap_content"
+				android:singleLine="true" android:id="@+id/teachername_edit"
+				android:layout_weight="1" 
+				android:hint="请输入老师姓名" android:textSize="20sp"
+				android:layout_gravity="center_vertical" android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_height="wrap_content" android:background="@null" />
+		</LinearLayout>
+			<!-- <LinearLayout android:orientation="horizontal"
+			android:id="@+id/zhoushu" android:layout_width="fill_parent"
+			android:layout_height="50dp" android:layout_below="@+id/address"
+			android:layout_marginTop="5dip" android:background="@drawable/input_box"
+			android:layout_centerHorizontal="true">
+			<TextView android:layout_width="wrap_content" android:text="周数:"
+			    android:textSize="20sp"
+				android:textColor="@color/black" android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content" android:layout_marginLeft="5dip" />
+			<EditText android:layout_width="wrap_content"
+				android:singleLine="true" android:id="@+d/zhoushu_edit"
+				android:layout_weight="1" 
+				android:hint="请输入上课周数" android:textSize="20sp"
+				android:layout_gravity="center_vertical" android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_height="wrap_content" android:background="@null" /> -->
+		<!-- </LinearLayout> -->
+			<LinearLayout android:orientation="horizontal"
+			android:id="@+id/beizhu" android:layout_width="fill_parent"
+			android:layout_height="50dp" android:layout_below="@+id/teachername"
+			android:layout_marginTop="5dip" android:background="@drawable/edit_view_border"
+			android:layout_centerHorizontal="true">
+			<TextView android:layout_width="wrap_content" android:text="备注:"
+			    android:textSize="20sp"
+				android:textColor="@color/black" android:layout_gravity="center_vertical"
+				android:layout_height="wrap_content" android:layout_marginLeft="5dip" />
+			<EditText android:layout_width="wrap_content"
+				android:singleLine="true" android:id="@+id/beizhu_edit"
+				android:layout_weight="1" 
+				android:hint="请输入课程信息" android:textSize="20sp"
+				android:layout_gravity="center_vertical" android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_height="wrap_content" android:background="@null" />
+		</LinearLayout>
+		
+		<TextView android:id="@+id/qu_xiao"
+			android:layout_width="140dip" android:layout_height="wrap_content"
+			android:text="取消" android:gravity="center"
+			android:layout_marginTop="15dip" android:layout_below="@id/beizhu"
+			android:background="@color/mubanse" android:layout_alignLeft="@id/beizhu"
+			android:textColor="@color/white" android:textSize="20sp" />
+		<TextView android:id="@+id/sure" android:layout_width="140dip"
+			android:layout_height="wrap_content" android:text="确定"
+			android:gravity="center" android:layout_below="@id/beizhu"
+			android:layout_marginTop="15dip" android:background="@color/mubanse"
+			android:layout_alignRight="@id/beizhu" android:textColor="@color/white"
+			android:textSize="20sp" />
+		
+		
+		
+		
+		</RelativeLayout>

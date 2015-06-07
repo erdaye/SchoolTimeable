@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/danhuang"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="34dp"
+        android:background="@color/danhuang" >
+
+        <Button
+            android:id="@+id/touxiang"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/share1" />
+        <TextView
+            android:id="@+id/yonghuming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/touxiang"
+            android:text="selina"
+            android:textSize="20dp"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/yonghunumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/yonghuming"
+            android:text="123456"
+           
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+           
+            android:layout_toLeftOf="@+id/yonghunumber"
+            android:text="爱问号："
+           
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginTop="68dp"
+        android:background="@color/mubanse" >
+
+        <ListView
+            android:id="@id/android:list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            </ListView>
+            
+        <TextView android:id="@id/android:empty"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           
+           android:text="No data"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
