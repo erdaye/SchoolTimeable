@@ -1,6 +1,9 @@
 package com.myclass;
 
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import com.cn.daming.deskclock.R;
 
 import android.app.Activity;
@@ -23,6 +26,8 @@ public class Jidshiben extends Activity {
 	private Button hButton,rijibut,createButton;
 	private ListView lv1;
 	
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -30,6 +35,7 @@ public class Jidshiben extends Activity {
 		setContentView(R.layout.comon_note_page);
 		hButton=(Button) findViewById(R.id.zuoye);
 		rijibut=(Button) findViewById(R.id.riji);
+		
 		lv1=(ListView) findViewById(R.id.commonnote);
 		createButton=(Button) findViewById(R.id.CreateNew2);
 		 getRelationFromDB2();
@@ -64,9 +70,9 @@ private void getRelationFromDB2() {
 	// TODO Auto-generated method stub
 	final DBadapter dbHelper=new DBadapter(this);
 	Cursor cursor=dbHelper.query3();
-
-	String[] from={"_id","title"};
-	int []to={R.id._id,R.id.title};
+	
+	String[] from={"_id","title","nowtime"};
+	int []to={R.id._id,R.id.title,R.id.time};
 	@SuppressWarnings("deprecation")
 	SimpleCursorAdapter scadapter=new SimpleCursorAdapter(this, R.layout.common_list_item, cursor, from, to);
 	lv1.setAdapter(scadapter);

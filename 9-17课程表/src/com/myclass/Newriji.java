@@ -1,4 +1,7 @@
 package com.myclass;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import com.cn.daming.deskclock.R;
 
 import android.app.Activity;
@@ -15,7 +18,7 @@ public class Newriji extends Activity {
 	
 	private TextView tvtitle,tvcontent;
 	private Button submit;
-	
+	private String nowtime;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -24,6 +27,9 @@ public class Newriji extends Activity {
 		tvcontent=(TextView) findViewById(R.id.rijicontent);
 		tvtitle=(TextView) findViewById(R.id.rijititle);
 		submit=(Button) findViewById(R.id.submit1);
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		nowtime=df.format(new Date());// new Date()为获取当前系统时间
+
 		
 		submit.setOnClickListener(new OnClickListener() {
 			
@@ -36,6 +42,7 @@ public class Newriji extends Activity {
 				final ContentValues vs=new ContentValues();
 				vs.put("title", tvtitle.getText().toString());
 				vs.put("content", tvcontent.getText().toString());
+				vs.put("nowtime", nowtime);
 				final DBadapter dbadapter=new DBadapter(getApplicationContext());		
 				   dbadapter.insert2(vs);
 				Intent i=new  Intent(Newriji.this,Jidshiben.class);
